@@ -15,32 +15,7 @@ namespace MyCoffeeApp.Views
         public CoffeeEquipmentPage()
         {
             InitializeComponent();
-            IncreaseCount = new Command(OnIncrease);
-            BindingContext = this;
-        }
 
-        public ICommand IncreaseCount { get; }
-        
-        int count = 0;
-        string countDisplay = "Click Me";
-
-
-        public string CountDisplay
-        {
-            get => countDisplay;
-            set
-            {
-                if (value == countDisplay)
-                    return;
-
-                countDisplay = value;
-                OnPropertyChanged();
-            }
-        }
-        void OnIncrease()
-        {
-                        count++;
-            CountDisplay = $"You clicked {count} time(s)";
         }
 
     }
